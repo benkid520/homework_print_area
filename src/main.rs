@@ -33,10 +33,3 @@ impl<T> Property<T> for Rectangle<T> {
 fn print_rectangle_area<T:Property<u16>>(item:&T){
     println!("{}",item.get_height()*item.get_width());
 }
-//End
-
-//泛型约束不允许 + Property<f32> 实施多个动态泛型trait的约束
-//如果需要实现这样的效果应如何操作 希望点评的老师能解答下 感谢！
-// fn print_rectangle_area<T:Property<u16> + Property<f32>>(item:&T){
-//     println!("{}",item.get_height()*item.get_width());
-// }
